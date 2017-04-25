@@ -1,11 +1,12 @@
-console.log("DOMHandler has loaded");
+
+
 
 //Get form info elements
 let firstName = document.getElementById("first-name");
 let lastName = document.getElementById("last-name");
 let pledge = document.getElementById("pledge");
 var pledgeType = document.getElementsByName("pledge-type");
-console.log("pledgeType", pledgeType);
+
 
 
 //Donate button captures info
@@ -25,10 +26,10 @@ donateBtn.addEventListener("click", function(event){
     if(whichselected == 1){
         pledgeOccurance = "One Time";
     } else if (whichselected ==0){
-        pledgeOccurance = "Per Lap"
+        pledgeOccurance = "Per Lap";
     }
 
-    console.log("pledgeOccurance", pledgeOccurance);
+    Donors.setDonor(firstName, lastName, pledge, pledgeOccurance);
 });
 
 
