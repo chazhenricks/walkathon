@@ -12,24 +12,25 @@ var pledgeType = document.getElementsByName("pledge-type");
 //Donate button captures info
 var donateBtn = document.getElementById("btn-donate");
 donateBtn.addEventListener("click", function(event){
-    firstName = firstName.value;
-    lastName = lastName.value;
-    pledge = pledge.value;
+    var donorFirstName = firstName.value;
+    var donorLastName = lastName.value;
+    var donorPledge = pledge.value;
     var whichselected;
-    var pledgeOccurance;
+    var pledgeOccurance = "";
     for (var i=0; i<pledgeType.length; i++){
         if(pledgeType[i].checked){
             whichselected = pledgeType[i].value;
             break;
         }
-    }
+    };
     if(whichselected == 1){
         pledgeOccurance = "One Time";
     } else if (whichselected ==0){
         pledgeOccurance = "Per Lap";
-    }
+    };
+    Donors.setDonor(donorFirstName, donorLastName, donorPledge, pledgeOccurance);
+    document.getElementById("print-div").innerHTML = Donors.getDonor();
 
-    Donors.setDonor(firstName, lastName, pledge, pledgeOccurance);
 });
 
 
