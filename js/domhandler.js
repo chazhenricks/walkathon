@@ -6,6 +6,8 @@ let firstName = document.getElementById("first-name");
 let lastName = document.getElementById("last-name");
 let pledge = document.getElementById("pledge");
 var pledgeType = document.getElementsByName("pledge-type");
+var donorTableInfo = document.getElementById("donor-table-info");
+
 
 
 
@@ -29,7 +31,9 @@ donateBtn.addEventListener("click", function(event){
         pledgeOccurance = "Per Lap";
     };
     Donors.setDonor(donorFirstName, donorLastName, donorPledge, pledgeOccurance);
-    document.getElementById("print-div").innerHTML = Donors.getDonor();
+
+
+    donorTableInfo.innerHTML += Donors.getDonor();
 
 });
 
