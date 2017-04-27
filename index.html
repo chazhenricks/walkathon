@@ -5,46 +5,49 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
 </head>
 <body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-lg-5 col-lg-push-5 col-lg-offset-1 donor-form">
+            <h1> Walk-A-Thon Donation Form</h1>
 
-<h1> Walk-A-Thon Donation Form</h1>
+                <fieldset>
+                    <legend>Pledge Form</legend>
 
-    <fieldset>
-        <legend>Pledge Form</legend>
+                    <label>First Name: </label>
+                    <input type="text" id="first-name" name="first-name" value="Chaz">
 
-        <label>First Name: </label>
-        <input type="text" id="first-name" name="first-name" value="Chaz">
+                    <label>Last Name: </label>
+                    <input type="text" id="last-name" name="last-name" value="Henricks"><br>
 
-        <label>Last Name: </label>
-        <input type="text" id="last-name" name="last-name" value="Henricks"><br>
+                    <label>Pledge Type: </label><br>
+                    <input type="radio" name="pledge-type" value="1"> One Time Donation <br>
+                    <input type="radio" name="pledge-type" value="0"> Per Lap<br>
 
-        <label>Pledge Type: </label><br>
-        <input type="radio" name="pledge-type" value="1"> One Time Donation <br>
-        <input type="radio" name="pledge-type" value="0"> Per Lap<br>
+                    <label>Pledge Ammount </label>
+                    <input type="text" id="pledge" name="pledge" value="50"><br>
 
-        <label>Pledge Ammount </label>
-        <input type="text" id="pledge" name="pledge" value="50"><br>
+                    <button id="btn-donate"> Donate </button>
+                    <button id="btn-clear">Clear</button>
+                </fieldset>
+            </div> <!-- End col-md-8 donor-form -->
 
-        <button id="btn-donate"> Donate </button>
-        <button id="btn-clear">Clear</button>
-    </fieldset>
+        <div class="col-md-6 col-lg-4 col-lg-pull-6 col-lg-offset-1 donor-table">
+            <table class ="table table-striped">
+                <thead>
+                    <tr id="table-row-header">
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Pledge Type</th>
+                        <th>Pledge Occurance</th>
+                    </tr>
+                </thead>
+                <tbody id="donor-table-info">
+                </tbody>
+            </table>
+        </div> <!-- End col-md-4 donor-table -->
 
-<hr>
-
-<div id="print-div"></div>
-
-<table class ="table table-striped">
-    <thead>
-        <tr id="table-row-header">
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Pledge Type</th>
-            <th>Pledge Occurance</th>
-        </tr>
-    </thead>
-    <tbody id="donor-table-info">
-    </tbody>
-</table>
-
+    </div> <!-- End Row -->
+</div> <!-- End Page Container -->
 
 
 
